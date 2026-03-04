@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-amethyst-50: #f5f3ff;
+  --color-amethyst-100: #ede9fe;
+  --color-amethyst-200: #ddd6fe;
+  --color-amethyst-300: #c4b5fd;
+  --color-amethyst-400: #a78bfa;
+  --color-amethyst-500: #8b5cf6;
+  --color-amethyst-600: #7c3aed;
+  --color-amethyst-700: #6d28d9;
+  --color-amethyst-800: #5b21b6;
+  --color-amethyst-900: #4c1d95;
+  --color-amethyst-950: #2e1065;
+
+  --color-royal-bg: #0f051a;
+  --color-royal-card: #1a0b2e;
+  --color-royal-accent: #d4af37;
+}
+
+@layer base {
+  body {
+    @apply bg-royal-bg text-white font-sans antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-royal-card/80 backdrop-blur-md border border-amethyst-500/20 rounded-2xl shadow-2xl shadow-amethyst-950/50;
+}
+
+.royal-gradient {
+  @apply bg-gradient-to-br from-amethyst-900 via-amethyst-800 to-royal-bg;
+}
+
+.gold-glow {
+  @apply shadow-[0_0_15px_rgba(212,175,55,0.3)];
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-royal-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-amethyst-700 rounded-full hover:bg-amethyst-600 transition-colors;
+}
